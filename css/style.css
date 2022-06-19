@@ -35,10 +35,15 @@ header {
     margin: 0 auto;
 }
 
-.final-img {
+.initial {
     margin: 25px auto;
     padding: 25%;
-    border: px solid black;
+}
+
+.img {
+    margin: 25px 10%;
+    width: 320px;
+    height: 320px;
 }
 
 label {
@@ -52,7 +57,7 @@ label {
     border-radius: 5px;
     margin: 0px auto;
     display: block;
-    padding: 5px 7px;
+    padding: 6px 8px;
     width: 95%;
 }
 

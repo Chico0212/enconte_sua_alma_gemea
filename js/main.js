@@ -2,27 +2,25 @@ let input = document.querySelector("#input-crush");
 
 input.addEventListener("keydown", function(event){
     if (event.key == "Enter"){
-        const yourName = input.value;
-        return requestToAPI(yourName);
+        return requestImage();
     }
 });
 
-function requestToAPI(name) {
-    const strToAI = strTreatment(name);
-    // const request = new XMLHttpRequest();
+function requestImage() {
+    let img = document.getElementsByClassName("img")[0];
+    const request = new XMLHttpRequest();
 
-    // request.open("");
+    request.addEventListener("load", function(){
+        spaceTreatment(img);
+        img.src = "https://thispersondoesnotexist.com/image";
+    });
 
-    spaceTreatment();
-    alert(strToAI);
+    request.open("GET", "https://thispersondoesnotexist.com/image");
+    request.send();
 }
 
-function strTreatment(subStr) {
-    return `pessoa com o nome ${subStr} desde que não seja uma criança`;
-}
-
-function spaceTreatment() {
-    let space = document.querySelector(".final-img");
-
+function spaceTreatment(img) {
+    let space = document.getElementsByClassName("initial")[0];
+    img.classList.remove("desapear");
     space.classList.add("desapear");
 }

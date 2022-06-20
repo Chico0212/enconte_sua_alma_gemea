@@ -35,15 +35,14 @@ header {
     margin: 0 auto;
 }
 
-.initial {
+#initial {
     margin: 25px auto;
     padding: 25%;
 }
 
-.img {
-    margin: 25px 10%;
-    width: 320px;
-    height: 320px;
+#img {
+    margin: 25px 40%;
+    width: 50%;
 }
 
 label {

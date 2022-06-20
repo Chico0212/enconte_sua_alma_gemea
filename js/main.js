@@ -7,20 +7,5 @@ input.addEventListener("keydown", function(event){
 });
 
 function requestImage() {
-    let img = document.getElementsByClassName("img")[0];
-    const request = new XMLHttpRequest();
-
-    request.addEventListener("load", function(){
-        spaceTreatment(img);
-        img.src = "https://thispersondoesnotexist.com/image";
-    });
-
-    request.open("GET", "https://thispersondoesnotexist.com/image");
-    request.send();
-}
-
-function spaceTreatment(img) {
-    let space = document.getElementsByClassName("initial")[0];
-    img.classList.remove("desapear");
-    space.classList.add("desapear");
+    alert("Isso poderia ser a integração com a API do DALLE2, mas eu ainda estou na lista de espera...");
 }

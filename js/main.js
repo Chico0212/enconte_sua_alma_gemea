@@ -1,11 +1,13 @@
-let input = document.querySelector("#input-crush");
+let inputSpace = document.getElementById("input");
 
-input.addEventListener("keydown", function(event){
+inputSpace.addEventListener("keydown", function(event){
     if (event.key == "Enter"){
-        return requestImage();
+        let button = document.getElementById("the-button");
+        const text = this.value;
+        button.classList.remove("desapear");
+        button.onclick = function() {
+            alert(`${text}, amor da sua vida vai aparecer, relaxe`);
+        };
     }
 });
 
-function requestImage() {
-    alert("Isso poderia ser a integração com a API do DALLE2, mas eu ainda estou na lista de espera...");
-}
